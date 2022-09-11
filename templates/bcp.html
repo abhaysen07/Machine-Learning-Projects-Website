@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>
+		Breast Cancer Prediction
+	</title>
+</head>
+<style>
+    .myDiv {
+    border: 7px outset skyblue;
+    background-color: peachpuff;
+    text-align: center;}
+    .myfont {
+        color: saddlebrown;
+    }
+
+</style>
+<body>
+	<p>
+		<h1>
+			<center>
+				Breast Cancer Prediction
+        	</center>
+    	</h1>
+	</p>
+	<br>
+    <p>
+    	<div class="myDiv">
+    		<form action="{{url_for('get_data_from_html3')}}" method="POST">
+                <div class="Radius_Mean">
+                    <h2>
+                        <label for="radius_mean">radius_mean</label>
+                        <input type="text" id="radius_mean" name="radius_mean">btw:[5.00-30.00]
+                    </h2>
+                </div>
+                <div class="Perimeter_mean">
+                    <h2>
+                        <label for="perimeter_mean">perimeter_mean</label>
+                        <input type="text" id="perimeter_mean" name="perimeter_mean">btw:[40.0-200.0]
+                    </h2>
+                </div>
+                <div class="Area_Mean">
+                    <h2>
+                        <label for="area_mean">area_mean</label>
+                        <input type="text" id="area_mean" name="area_mean">btw:[0-2500]  
+                    </h2>
+                </div>
+                <div class="Compactness_Mean">
+                    <h2>
+                        <label for="compactness_mean">compactness_mean</label>
+                        <input type="text" id="compactness_mean" name="compactness_mean">btw:[0-0.5]
+                    </h2>
+                </div>
+                <div class="Concavity_Mean">
+                    <h2>
+                        <label for="concavity_mean">concavity_mean</label>
+                        <input type="text" id="concavity_mean" name="concavity_mean">btw:[0-0.5]
+                    </h2>
+                </div>
+                <div class="Concave_Points_Mean">
+                    <h2>
+                        <label for="concave_points_mean">concave_points_mean</label>
+                        <input type="text" id="concave_points_mean" name="concave_points_mean">btw:[0-0.5]
+                    </h2>
+                </div>
+                <div class="Radius_SE">
+                    <h2>
+                        <label for="radius_se">radius_se</label>
+                        <input type="text" id="radius_se" name="radius_se">btw:[0- 3.0]
+                    </h2>
+                </div>
+                <div class="Perimeter_SE">
+                    <h2>
+                        <label for="perimeter_se">perimeter_se</label>
+                        <input type="text" id="perimeter_se" name="perimeter_se">btw:[0-30.0]  
+                    </h2>
+                </div>
+                <div class="Area_SE">
+                    <h2>
+                        <label for="area_se">area_se</label>
+                        <input type="text" id="area_se" name="area_se">btw:[0-550]
+                    </h2>
+                </div>
+                <div class="Radius_Worst">
+                    <h2>
+                        <label for="radius_worst">radius_worst</label>
+                        <input type="text" id="radius_worst" name="radius_worst">btw[0-50]
+                    </h2>
+                </div>
+                <div class="Perimeter_Worst">
+                    <h2>
+                        <label for="perimeter_worst">perimeter_worst</label>
+                        <input type="text" id="perimeter_worst" name="perimeter_worst">btw:[0-250]
+                    </h2>
+                </div>
+                <div class="Area_Worst">
+                    <h2>
+                        <label for="area_worst">area_worst</label>
+                        <input type="text" id="area_worst" name="area_worst">btw:[185-4250]  
+                    </h2>
+                </div>
+                <div class="Compactness_Worst">
+                    <h2>
+                        <label for="compactness_worst">compactness_worst</label>
+                        <input type="text" id="compactness_worst" name="compactness_worst">btw:[0.0-1.6]
+                    </h2>
+                </div>
+                <div class="Concavity_Worst">
+                    <h2>
+                        <label for="concavity_worst">concavity_worst</label>
+                        <input type="text" id="concavity_worst" name="concavity_worst">btw:[0-1.25]
+                    </h2>
+                </div>
+                <div class="Concave_Points_Worst">
+                    <h2>
+                        <label for="concave_points_worst">concave_points_worst</label>
+                        <input type="text" id="concave_points_worst" name="concave_points_worst">btw:[0-0.3]
+                    </h2>
+                </div>
+                <input type="submit" value="Predict">
+            </form>
+        </div>
+    </p>
+</body>
+</html>

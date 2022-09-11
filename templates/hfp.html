@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Failure Prediction</title>
+</head>
+<style>
+    .myDiv {
+    border: 4px inset red;
+    background-color: lightblue;
+    text-align: center;
+  }
+</style>
+<body>
+    <h1>
+        <center>
+            Heart Failure Prediction
+        </center>
+    </h1>
+    <p>
+        <center>
+            <div class="myDiv">
+                <form action="{{url_for('get_data_from_html1')}}" method="POST">
+                    <div class="Age">
+                        <h4>
+                            <label for="age">age</label>
+                            <input type="text" id="age" name="age">btw:[0-100]
+                        </h4>
+                    </div>
+                    <div class="Anaemia">
+                        <h4>
+                            <label for="anaemia">anaemia</label>
+                            <input type="text" id="anaemia" name="anaemia">btw:[0-1]  
+                        </h4>
+                    </div>
+                    <div class="Creatinine_Phosphokinase">
+                        <h4>
+                            <label for="creatinine_phosphokinase">creatinine_phosphokinase</label>
+                            <input type="text" id="creatinine_phosphokinase" name="creatinine_phosphokinase">btw:[0-10000]  
+                        </h4>
+                    </div>
+                    <div class="Diabetes">
+                        <h4>
+                            <label for="diabetes">diabetes</label>
+                            <input type="text" id="diabetes" name="diabetes">btw:[0-1]
+                        </h4>
+                    </div>
+                    <div class="">
+                        <h4>
+                            <label for="ejection_fraction">ejection_fraction</label>
+                            <input type="text" id="ejection_fraction" name="ejection_fraction">btw:[0-100]  
+                        </h4>
+                    </div>
+                    <div class="High_Blood_Pressure">
+                        <h4>
+                            <label for="high_blood_pressure">high_blood_pressure</label>
+                            <input type="text" id="high_blood_pressure" name="high_blood_pressure">btw:[0-1]
+                        </h4>
+                    </div>
+                    <div class="Platelets">
+                        <h4>
+                            <label for="platelets">platelets</label>
+                            <input type="text" id="platelets" name="platelets">btw:[0-1000000]
+                        </h4>
+                    </div>
+                    <div class="Serum_Creatinine">
+                        <h4>
+                            <label for="serum_creatinine">serum_creatinine</label>
+                            <input type="text" id="serum_creatinine" name="serum_creatinine">btw:[0-10.0]
+                        </h4>
+                    </div>
+                    <div class="serum_sodium">
+                        <h4>
+                            <label for="serum_sodium">serum_sodium</label>
+                            <input type="text" id="serum_sodium" name="serum_sodium">btw:[0-500]
+                        </h4>
+                    </div>
+                    <div class="Sex">
+                        <h4>
+                            <label for="sex">sex</label>
+                            <input type="text" id="sex" name="sex">btw[0-1]
+                        </h4>
+                    </div>
+                    <div class="Smoking">
+                        <h4>
+                            <label for="smoking">smoking</label>
+                            <input type="text" id="smoking" name="smoking">btw:[0-1]
+                        </h4>
+                    </div>
+                    <div>
+                        <h4>
+                            <label for="time">time</label>
+                            <input type="text" id="time" name="time">btw:[0-400]
+                        </h4>
+                    </div>
+                    <input type="submit" value="Predict">
+                </form>
+            </div>
+        </center>
+    </p>
+</body>
+</html>

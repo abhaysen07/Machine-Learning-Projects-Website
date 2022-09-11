@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>
+		Bmi Prediction
+	</title>
+</head>
+<style>
+    .myDiv{
+    	border: 3px outset palevioletred;
+    	background-color: slategrey;
+    	text-align: center;
+    }
+    .myfont{
+    	color: saddlebrown;
+    }
+</style>
+<body>
+	<p>
+		<center>
+			<h1>
+				Bmi Prediction
+			</h1>
+		</center>
+	</p>
+	<p>
+		<div class="myDiv">
+			<form action="{{url_for('get_data_from_html2')}}" method="POST">
+				<div class="Gender">
+					<h2>
+						<label for="gender">gender</label>
+                        <input type="text" id="gender" name="gender">btw:[0-1]
+                    </h2>				
+				</div>
+				<div class="Height">
+					<h2>
+						<label for="height">height</label>
+                        <input type="text" id="height" name="height">btw:[120-200]
+					</h2>
+				</div>
+				<div class="Weight">
+					<h2>
+						<label for="weight">weight</label>
+                        <input type="text" id="weight" name="weight">btw:[50-170]
+					</h2>
+				</div>
+				<input type="submit" value="Predict">
+			</form>
+		</div>
+	</p>
+</body>
+</html>
